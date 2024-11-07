@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+ <html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Questão-1</title>
+        <link rel="stylesheet" href="file.css">
+    </head>
+    <body>
+        <main class="center">
+            <div>
+            </div>
+            <h1 class="header">Pedro Henrique da Silva Gomes 202403076624</h1>
+            <p style="color: rgb(173, 169, 169);">Aluno de Ciências da Computação </p>
+            <p class="text-center">Olá,meu nome é Pedro Henrique e sou aluno da faculdade Estacio de Sá de Niterói faço o curso de ciências da computução e tenho como principal objetivo profissional trabalhar fora do país em grandes empresas como Microsoft, Google, Amazon e etc. E gosto muito de trabalhar com Desenvolvimento Web..</p>
+                <div class="colunas">
+                    <button class="button">CSS</button>
+                </div>
+                <div class="colunas">
+                    <button class="button">Javascript</button>
+                </div>
+                <div class="colunas">
+                    <button class="button">HTML</button>
+                </div>
+                <div class="colunas">
+                    <button class="button">C</button>
+                </div>
+            <div>
+                <div class="colunas">
+                    <p class="texto-verde">Github</p>
+                </div>
+                <div class="colunas">
+                    <p class="texto-verde">Linkedin</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+
+
+Em CSS
+
+body{
+    margin: 0;
+}
+
+/imagem redonda/
+#perfil {
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+    margin-top: 2%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+main{
+    background-color: white;
+}
+
+.margin-lr{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    color: chartreuse;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.center_input{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden{
+    display: none;
+}
+
+.button {
+    background-color: chartreuse;
+    border:none;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem;
+    margin: auto;
+}
+
+.colunas{
+    width: 20%;
+    display: inline-block;
+}
+
+.texto-verde{
+    font-weight: bold;
+    color: chartreuse;
+}
