@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Página</title>
+        <link rel="stylesheet" href="file.css">
+    </head>
+    <body>
+        <main class="center">
+            <table class="center_input text-left">
+                <tr class="table-verde">
+                    <th class="produto">Produto</th> 
+                    <th class="descrição">Descrição</th> 
+                    <th class="preço">Preço (R$)</th>
+                </tr>
+                <tr>
+                    <td class="produto">Ps5</td> 
+                    <td class="descrição">Jogabilidade de alta taxa de quadros: Aproveite jogos compatíveis em até 120 fps, com suporte para saída de 120 Hz em telas 4K. </td> 
+                    <td class="preço">R$4000,00</td>
+                </tr>
+                <tr>
+                    <td class="produto">Dualsense</td> 
+                    <td class="descrição">Assuma o controle com um design avançado com resposta tátil, as vibrações responsivas reagem às suas escolhas no jogo e simulam fatores ambientais em jogos selecionados do PS5.</td> 
+                    <td class="preço">R$410,00</td>
+                </tr>
+                <tr>
+                    <td class="produto">Headset sem fio PULSE Elite</td> 
+                    <td class="descrição">A próxima geração de áudio para games: Desfrute de um som extraordinário e realista nos seus games favoritos.</td> 
+                    <td class="preço">R$900,00</td>
+                </tr>
+                <tr>
+                    <td class="produto">Base de carregamento do Dualsense</td> 
+                    <td class="descrição"> É uma forma rápida e fácil de carregar os seus controles.</td> 
+                    <td class="preço">R$180,00</td>
+                </tr>
+            </table>
+        </main>
+    </body>
+</html>
+
+CSS
+
+
+body{
+    margin: 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+main{
+    background-color: white;
+}
+
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.center_input{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.table-verde{
+    background-color: rgb(13, 100, 13);
+    color: white;
+}
+
+th, td {
+    padding: 2%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.produto {
+    width: 10%;
+}
+
+.descrição{
+    width: 33%;
+}
+
+.preço {
+    width: 10%;
+}
+
+table, th, td {
+    border: 1px solid rgb(128, 128, 128);
+    border-collapse: collapse;
+}
+
+.text-left{
+    text-align: left;
+}
