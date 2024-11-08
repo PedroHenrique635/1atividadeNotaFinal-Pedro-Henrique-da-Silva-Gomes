@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Questão-4</title>
+        <link rel="stylesheet" href="file.css">
+    </head>
+    <body>
+        <main class="center">
+            <h1>Calculadora de IMC</h1>
+            <label for="peso">Peso (kg): </label>
+            <input class="rounded block inputs" type="text" name="peso" placeholder="Peso" id="peso">
+            <label for="altura">Altura (m): </label>
+            <input class="rounded block inputs" type="text" name="altura" placeholder="Altura" id="altura">
+            <input class="rounded btn block inputs" type="submit" value="Calcular IMC" onclick="return calcula()">
+            <div id="resultado"></div>
+        </main>
+        <script>
+            function calcula(){
+                let peso = document.getElementById("peso").value;
+                let altura = document.getElementById("altura").value;
+                if (peso != "" && altura != ""){
+                    let imc = peso / (altura * altura);
+                    let resultado = document.getElementById("resultado");
+                    resultado.innerHTML = "Seu IMC é: " + imc.toFixed(2);
+                }
+            }
+        </script>
+    </body>
+</html>
+
+CSS
+
+body{
+    margin: 0;
+}
+
+.center{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+form{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1{
+    margin-top: 10%;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.btn {
+    background-color: darkseagreen;
+    text-align: center;
+    color: black;
+    padding: 2%;
+    border: none;
+}
+
+.block{
+    display: block;
+}
+
+.inputs{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 50%;
+    padding: 10px  8px 10px 8px;
+    box-sizing: border-box;
+}
+
+#resultado{
+    margin-top: 2%;
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+
