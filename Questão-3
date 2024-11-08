@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Questão-3</title>
+        <link rel="stylesheet" href="file.css">
+    </head>
+    <body>
+        <main class="center">
+            <h1>Formulário de Contato</h1>
+            <form id="form">
+                <input class="rounded block inputs" type="text" name="nome" placeholder="Nome" id="nome" oninput="esconde(1)">
+                <div class="error hidden" id="nome_vazio">
+                    Nome vazio!
+                </div>
+                <input class="rounded block inputs" type="email" name="email" placeholder="Email" id="email" oninput="esconde(2)">
+                <div class="error hidden" id="email_vazio">
+                    Email vazio!
+                </div>
+                <div class="error hidden" id="email_errado">
+                    Email incorreto!
+                </div>
+                <textarea class="rounded block inputs" id="textarea" placeholder="Sua mensagem..." rows="10" cols="30" oninput="esconde(3)"></textarea>
+                <div class="error hidden" id="mensagem_vazia">
+                    Mensagem vazia!
+                </div>
+                <input class="rounded btn block inputs" type="submit" value="Enviar" onclick="return valida()">    
+            </form>
+        </main>
+        <script>
+            function esconde(e){
+                switch(e){
+                    case 1:
+                        let x = document.getElementById("nome_vazio");
+                        if(!x.classList.contains("hidden")){x.classList.add("hidden")};
+                        break;
+                    case 2:
+                        let y = document.getElementById("email_vazio");
+                        let z = document.getElementById("email_errado");
+                        if(!y.classList.contains("hidden")){y.classList.add("hidden")};
+                        if(!z.classList.contains("hidden")){z.classList.add("hidden")};
+                        break;
+                    case 3:
+                    let w = document.getElementById("mensagem_vazia");
+                        if(!w.classList.contains("hidden")){w.classList.add("hidden")};
+                        break;
+                }
+            }
+            function valida(){
+                let nome = document.getElementById("nome").value;
+                let email = document.getElementById("email").value;
+                let textarea = document.getElementById("textarea").value;
+                let valida = false;                    
+                let contemArroba = false;
+                let contemPonto = 0;
+                for (let i = 0; i < email.length;i++){
+                    if (email[i] == '@'){
+                        contemArroba = true;
+                    } 
+                    if (email[i] == '.'){
+                        contemPonto++;
+                    }
+                }
+
+                if (nome != "" && email != "" && textarea != "" && contemArroba == true && contemPonto == true){
+                    document.getElementById("form").submit();
+                }
+                
+                else {
+
+                    if (nome == ""){document.getElementById("nome_vazio").classList.remove("hidden")}
+                    if (email == ""){document.getElementById("email_vazio").classList.remove("hidden")}
+                    if((contemArroba == false || contemPonto == 0) && email != ""){document.getElementById("email_errado").classList.remove("hidden")}
+                    if (textarea == ""){document.getElementById("mensagem_vazia").classList.remove("hidden")}
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
+
+CSS
+
+body{
+    margin: 0;
+}
+
+.center{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+form{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1{
+    margin-top: 10%;
+    color:rgb(122, 54, 54);
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.btn {
+    background-color: darkseagreen;
+    text-align: center;
+    color: black;
+    padding: 2%;
+    border: none;
+}
+
+.block{
+    display: block;
+}
+
+.inputs{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2%;
+    width: 50%;
+    padding: 10px  8px 10px 8px;
+    box-sizing: border-box;
+}
+
+.error{
+    color: rgb(214, 43, 43);
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2%;
+    width: 50%;
+    padding-left: 5px;
+}
+.hidden{
+    display: none;
+}
